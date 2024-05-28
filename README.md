@@ -1,9 +1,9 @@
-# FutureRun_GameProject
+# NaturesGuardian_GameProject
 
-Een futuristisch endless runner spel ontwikkeld voor het examen Basis Programmeren van Games.
+Een fantasy/natuur endless runner spel ontwikkeld voor het examen Basis Programmeren van Games.
 
 ## Projectbeschrijving
-FutureRun is een spel waarin je een karakter bestuurt dat steeds blijft rennen door een futuristisch schoolterrein. Je moet proberen obstakels te ontwijken en spullen te verzamelen. Het spel wordt steeds moeilijker naarmate je verder komt.
+Nature's Guardian is een spel waarin je een karakter bestuurt dat steeds blijft rennen door een magisch bos. Je moet proberen obstakels te ontwijken en magische voorwerpen te verzamelen. Het spel wordt steeds moeilijker naarmate je verder komt.
 
 ## Functionaliteiten
 - Spel starten en besturen
