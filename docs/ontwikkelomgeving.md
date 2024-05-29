@@ -23,3 +23,7 @@
 3. **Visual Studio Code**
    - **Versie:** 1.89.1
    - **Functie:** Code-editor voor het schrijven en bewerken van scripts.
+
+4. **Asset Forge**
+   - **Versie:** 2.0
+   - **Functie:** Tool voor het maken van 3D-modellen voor de game.
