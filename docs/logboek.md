@@ -72,3 +72,39 @@
 - Een systeem maken dat bijhoudt wanneer de speler een obstakel raakt
 - Ervoor zorgen dat het spel eindigt als de hit counter boven de 2 komt
 - Ervoor zorgen dat het spel direct eindigt wanneer de speler een specifiek groot/zwaar obstakel raakt
+
+## Dag 4 - 2024-05-30
+
+**Doelen voor de dag:**
+- Obstakels maken/exporteren in Asset Forge
+- Willekeurig verschillende obstakels spawnen op elk van de 3 banen
+- Colliders/collision toevoegen aan de obstakels
+- Een hit counter systeem toevoegen voor het raken van obstakels
+- Een scoreteller toevoegen die toeneemt naarmate het spel vordert
+- Verzamelbare items maken/exporteren in Asset Forge
+- Verzamelbare items implementeren in Unity
+- Willekeurig verzamelbare items spawnen op elke baan
+- Verzamelbare items kunnen oppakken en score toevoegen aan de scoreteller
+- Player spring hoogte aanpassen
+- Een counter voor de opgepakte coins toevoegen
+
+**Voltooide Taken:**
+- Alle doelen zijn behaald behalve de obstacle hit counter
+
+**Uitdagingen:**
+- Het maken van de random obstacle generator was complexer dan ik had verwacht, ik moest het uiteindelijk synchroniseren met de tegelcreatie
+
+**Volgende Stappen:**
+- Zeldzame verzamelbare items toevoegen, zodra 5 zijn verzameld, verhoogt de score multiplier met 1
+- Een hit counter toevoegen voor wanneer de speler een obstakel raakt
+- Het spel stoppen wanneer een speler een groot obstakel raakt
+- Een manier vinden om te voorkomen dat de speler vast komt te zitten op kleine obstakels
+- Een speelermodel toevoegen
+- Animaties toevoegen aan het speelermodel
+- Animaties toevoegen aan verzamelbare items
+- Een startscherm maken
+- Een eindscherm maken
+- Een leaderboard maken dat de top 10 laatste runs/spelen opslaat
+
+**Notes for future self:**
+- Maybe look into Object Pooling? instead of spawning and deleting objects we use re-use the existing objects from behind the player
