@@ -106,5 +106,37 @@
 - Een eindscherm maken
 - Een leaderboard maken dat de top 10 laatste runs/spelen opslaat
 
+
+## Dag 5 - 2024-06-03
+
+**Doelen voor de dag:**
+- Zeldzame verzamelbare items toevoegen, zodra 5 zijn verzameld, verhoogt de score multiplier met 1
+- Een health system implementeren dat health van de speler verwijdert wanneer obstakels worden geraakt
+- Het spel stoppen wanneer de health van de speler op 0 komt
+- Knockback toevoegen wanneer de speler een obstakel raakt
+- Een speelermodel toevoegen
+- Animaties toevoegen aan het speelermodel
+- Animaties toevoegen aan verzamelbare items
+- Een startscherm maken
+- Een eindscherm maken
+- Een leaderboard maken dat de top 10 laatste runs/spelen opslaat
+
+**Voltooide Taken:**
+- Een health system implementeren dat health van de speler verwijdert wanneer obstakels worden geraakt
+- Het spel stoppen wanneer de health van de speler op 0 komt
+- Knockback toevoegen wanneer de speler een obstakel raakt
+
+**Uitdagingen:**
+- Een goed werkend start scherm, ik moet nog naar iets meer voorbeelden kijken
+
+**Volgende Stappen:**
+- Zeldzame verzamelbare items toevoegen, zodra 5 zijn verzameld, verhoogt de score multiplier met 1
+- Een speelermodel toevoegen
+- Animaties toevoegen aan het speelermodel
+- Animaties toevoegen aan verzamelbare items
+- Een startscherm maken
+- Een eindscherm maken
+- Een leaderboard maken dat de top 10 laatste runs/spelen opslaat
+
 **Notes for future self:**
 - Maybe look into Object Pooling? instead of spawning and deleting objects we use re-use the existing objects from behind the player
