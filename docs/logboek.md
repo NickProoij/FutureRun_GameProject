@@ -138,5 +138,35 @@
 - Een eindscherm maken
 - Een leaderboard maken dat de top 10 laatste runs/spelen opslaat
 
+## Dag 6 - 2024-06-04
+
+**Doelen voor de dag:**
+- Zeldzame verzamelbare items toevoegen, zodra 5 zijn verzameld, verhoogt de score multiplier met 1
+- Een speelermodel toevoegen
+- Animaties toevoegen aan het speelermodel
+- Animaties toevoegen aan verzamelbare items
+- Een startscherm maken
+- Een eindscherm maken
+- Een opties menu toevoegen
+- Een leaderboard maken dat de top 10 laatste runs/spelen opslaat
+
+**Voltooide Taken:**
+- Een startscherm maken
+- Een eindscherm maken
+- Een opties menu toevoegen
+- restart functionaliteit
+
+**Uitdagingen:**
+- Het maken en uitwerken van het main menu en het game over scherm duurde langer dan gedacht
+
+**Volgende Stappen:**
+- Zeldzame verzamelbare items toevoegen, zodra 5 zijn verzameld, verhoogt de score multiplier met 1
+- Een speelermodel toevoegen
+- Animaties toevoegen aan het speelermodel
+- Animaties toevoegen aan verzamelbare items
+- Een leaderboard maken dat de top 10 laatste runs/spelen opslaat
+- Een health bar toevoegen aan de UI
+- Een plaatje van een coin toevoegen aan de UI
+
 **Notes for future self:**
 - Maybe look into Object Pooling? instead of spawning and deleting objects we use re-use the existing objects from behind the player
