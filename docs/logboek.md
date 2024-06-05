@@ -168,5 +168,74 @@
 - Een health bar toevoegen aan de UI
 - Een plaatje van een coin toevoegen aan de UI
 
+## Dag 7 - 2024-06-05
+
+**Doelen voor de dag:**
+- Zeldzame verzamelbare items toevoegen, zodra 5 zijn verzameld, verhoogt de score multiplier met 1
+- Een speelermodel toevoegen
+- Animaties toevoegen aan het speelermodel
+- Animaties toevoegen aan verzamelbare items
+- Een leaderboard maken dat de top 10 laatste runs/spelen opslaat
+- Een reset button toevoegen voor de leaderboard
+- Een plaatje van een coin toevoegen aan de UI
+- Een health bar toevoegen aan de UI
+- Comments toevoegen aan de scripts
+
+**Voltooide Taken:**
+- Zeldzame verzamelbare items toevoegen, zodra 5 zijn verzameld, verhoogt de score multiplier met 1
+- Een speelermodel toegevoegd
+- Animaties toegevoegd aan het speelermodel
+- Een leaderboard gemaakt dat de top 10 laatste runs/spelen opslaat
+- Een reset button toegevoegd voor de leaderboard
+- Een plaatje van een coin toegevoegd aan de UI
+- Een Score multiplier toegevoegd
+- Comments toegevoegd aan de scripts
+
+**Uitdagingen:**
+- Het toevoegen van een nieuw speelermodel was behoorlijk uitdagend omdat sommige animaties niet correct werkten. Ik moest veel aanpassingen doen aan mijn speler script.
+
+**Volgende Stappen:**
+- Een overdrachtsdocument uitschrijven en afronden
+- Een presentatie maken en die voorbereiden, plaatjes en videos of gifs toevoegen om de game te vertonen en het development process te vertonen
+- De game nog een keer te laten testen om te kijken of er geen bugs in zitten
+- Eventuele bugs oplossen als die voorkomen
+
 **Notes for future self:**
 - Maybe look into Object Pooling? instead of spawning and deleting objects we use re-use the existing objects from behind the player
+
+### Testverslag - Gebruikerstestsessie
+
+**Datum:** 2024-05-30  
+**Tijd:** 14:00  
+**Tester:** Batuhan
+
+#### Bevindingen van de gebruiker
+
+1. **Game eindigt niet:**
+   - **Beschrijving:** Batuhan gaf aan dat de game nooit eindigt, ongeacht hoeveel obstakels hij raakt.
+   - **Reactie:** Hij stelde voor dat het duidelijker zou moeten zijn wanneer het spel eindigt.
+
+2. **Speler springt willekeurig:**
+   - **Beschrijving:** De speler begint soms willekeurig op en neer te springen.
+   - **Reactie:** Dit zorgde voor verwarring en maakte het moeilijker om te spelen.
+
+3. **Camerapositie:**
+   - **Beschrijving:** Batuhan vermeldde dat de camerapositie niet optimaal is omdat hij soms niet over de grotere obstakels heen kan kijken.
+   - **Reactie:** Hierdoor miste hij soms essentiële delen van het speelveld, wat de spelervaring negatief beïnvloedde.
+
+---
+### Aanpassingen en verbeteringen na de testsessie
+
+1. **Obstakel-hit systeem vervangen door health systeem:**
+   - **Beschrijving:** Ik heb het systeem waarbij de game nooit eindigde aangepast naar een health systeem. Nu heeft de speler een health van 100 aan het begin en heeft elk obstakel een verschillende schade hoeveelheid, wat het makkelijker maakt om te bepalen wanneer het spel eindigt.
+   - **Actie:** Implementatie van een health systeem waarin de speler een bepaald aantal health punten heeft die verminderen bij contact met obstakels. Zodra de health op is, eindigt het spel.
+
+2. **Grondcontrole verbeterd:**
+   - **Beschrijving:** Ik heb de methode voor het controleren of de speler op de grond staat aangepast door een ander type raycast te gebruiken en over te schakelen naar een capsule collider.
+   - **Actie:** Door deze aanpassing zijn de willekeurige sprongen van de speler verholpen, wat resulteerde in een stabielere spelervaring.
+
+3. **Camerapositie aangepast:**
+   - **Beschrijving:** De positie van de camera is aangepast zodat de speler een beter zicht heeft op het speelveld en de grotere obstakels.
+   - **Actie:** De camera is hoger en iets verder naar achter geplaatst, wat ervoor zorgt dat de speler een beter overzicht heeft van de omgeving en obstakels tijdig kan zien.
+
+Door deze verbeteringen is de spelervaring significant verbeterd en zijn de door Batuhan aangegeven problemen opgelost.
