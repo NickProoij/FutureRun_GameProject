@@ -7,7 +7,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject[] tilePrefabs;
     public GameObject[] obstaclePrefabs;
     public GameObject coinPrefab;
-    public GameObject applePrefab; // Prefab for the rare collectible (apple)
+    public GameObject applePrefab;
     public Transform cameraTransform;
     public int numberOfStartingTiles = 6;
     public float tileLength = 3f;
@@ -33,7 +33,8 @@ public class LevelGenerator : MonoBehaviour
         // Spawn the initial tiles without obstacles
         for (int i = 0; i < numberOfStartingTiles; i++)
         {
-            SpawnTile(i >= 5); // Start spawning obstacles on the 6th tile
+            // Start spawning obstacles on the 6th tile
+            SpawnTile(i >= 5); 
         }
     }
 
@@ -54,10 +55,12 @@ public class LevelGenerator : MonoBehaviour
 
     void SpawnTile(bool spawnObstacles)
     {
+        // Instantiate a new tile at the current spawn position
         GameObject tile = Instantiate(tilePrefabs[RandomPrefabIndex()], new Vector3(0, 0, spawnZ), Quaternion.identity);
         tile.transform.SetParent(transform);
         activeTiles.Add(tile);
 
+        // Spawn obstacles and coins on the new tile if required
         if (spawnObstacles)
         {
             SpawnObstacle(spawnZ, tile.transform.position.y, tile);
@@ -71,14 +74,17 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
+        // Update the spawn position for the next tile
         spawnZ += tileLength;
     }
 
     void DeleteOldTile()
     {
+        // Remove the oldest tile
         GameObject oldTile = activeTiles[0];
         activeTiles.RemoveAt(0);
 
+        // Remove obstacles that are associated with the oldest tile
         for (int i = activeObstacles.Count - 1; i >= 0; i--)
         {
             if (activeObstacles[i] != null && activeObstacles[i].transform.parent == oldTile.transform)
@@ -88,6 +94,7 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
+        // Remove coins that are associated with the oldest tile
         for (int i = activeCoins.Count - 1; i >= 0; i--)
         {
             if (activeCoins[i] != null && activeCoins[i].transform.parent == oldTile.transform)
@@ -97,6 +104,7 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
+        // Remove apples that are associated with the oldest tile
         for (int i = activeApples.Count - 1; i >= 0; i--)
         {
             if (activeApples[i] != null && activeApples[i].transform.parent == oldTile.transform)
@@ -106,14 +114,17 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
+        // Destroy the old tile
         Destroy(oldTile);
     }
 
     void SpawnObstacle(float zPosition, float tileYPosition, GameObject parentTile)
     {
+        // Decide lanes for obstacles
         int[] lanes = new int[] { -1, 0, 1 };
         List<int> usedLanes = new List<int>();
 
+        // Ensure not all three lanes are blocked
         int numberOfObstacles = Random.Range(1, 3);
         for (int i = 0; i < numberOfObstacles; i++)
         {
@@ -124,6 +135,7 @@ public class LevelGenerator : MonoBehaviour
             }
             usedLanes.Add(lanes[laneIndex]);
 
+            // Instantiate obstacle at the chosen lane
             GameObject obstacle = Instantiate(obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)],
                 new Vector3(lanes[laneIndex], tileYPosition + 0.16f, zPosition), Quaternion.identity);
             obstacle.transform.SetParent(parentTile.transform);
@@ -133,9 +145,11 @@ public class LevelGenerator : MonoBehaviour
 
     void SpawnCoinTrail(float zPosition, float tileYPosition, GameObject parentTile)
     {
+        // Determine the starting lane for the coin trail
         int startLane = Random.Range(-1, 2);
         bool coinTrailFits = true;
 
+        // Check if the coin trail fits without overlapping with obstacles
         for (int i = 0; i < coinTrailLength; i++)
         {
             float coinZPosition = zPosition + (i * 1f);
@@ -153,6 +167,7 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
+        // Spawn the coin trail if it fits
         if (coinTrailFits)
         {
             for (int i = 0; i < coinTrailLength; i++)
@@ -167,7 +182,9 @@ public class LevelGenerator : MonoBehaviour
 
     void SpawnApple(float zPosition, float tileYPosition, GameObject parentTile)
     {
+        // Determine the lane for the apple
         int lane = Random.Range(-1, 2);
+        // Instantiate the apple
         GameObject apple = Instantiate(applePrefab, new Vector3(lane, tileYPosition + 0.4f, zPosition), Quaternion.identity);
         apple.transform.SetParent(parentTile.transform);
         activeApples.Add(apple);
@@ -180,6 +197,7 @@ public class LevelGenerator : MonoBehaviour
             return 0;
         }
 
+        // Return a random index for the tilePrefabs array
         int randomIndex = Random.Range(0, tilePrefabs.Length);
         return randomIndex;
     }
@@ -188,8 +206,8 @@ public class LevelGenerator : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(10f);
-            currentSpawnRate += spawnRateIncreaseRate;
+            yield return new WaitForSeconds(10f); // Increase spawn rate every 10 seconds
+            currentSpawnRate += spawnRateIncreaseRate; // Increase the current spawn rate
         }
     }
 }
