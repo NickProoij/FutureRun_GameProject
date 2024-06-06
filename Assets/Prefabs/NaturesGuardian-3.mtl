@@ -1,0 +1,35 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl wood
+Kd 0.298 0.184 0.063
+
+newmtl roof
+Kd 0.259 0.792 0.604
+
+newmtl stoneDark
+Kd 0.503 0.666 0.736
+
+newmtl _defaultMat
+Kd 0.922 0.682 0.365
+
+newmtl dirtDark
+Kd 0.71 0.408 0.271
+
+newmtl custom2
+Kd 0.208 0.462 0.065
+
+newmtl woodDark
+Kd 0.769 0.427 0.294
+
+newmtl colorRed
+Kd 0.878 0.29 0.314
+
+newmtl colorTan
+Kd 1 0.682 0.435
+
+newmtl stone
+Kd 0.692 0.862 0.934
+
+newmtl woodInner
+Kd 0.961 0.843 0.733
+

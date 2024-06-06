@@ -1,0 +1,8 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl custom2
+Kd 0.2980392 0.1843137 0.06274509
+
+newmtl woodInner
+Kd 0.961 0.843 0.733
+
